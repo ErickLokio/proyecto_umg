@@ -1,0 +1,57 @@
+<div class="container w-75 bg-primary mt-5 rounder shadow">
+    <div class="row align-items-stretch" >
+        <div class="col bg-white rounder">
+            <h2 class="fw-bold text-center py-5">Ingreso de usuarios</h2>
+
+            <form class="row g-3">
+                <div class="col-md-6">
+                  <label for="nombres" class="form-label">Nombres:</label>
+                  <input type="text" [(ngModel)]="persona.nombres" [ngModelOptions]="{standalone: true}" class="form-control" id="nombres">
+                </div>
+                <div class="col-md-6">
+                  <label for="apellidos" class="form-label">Apellidos</label>
+                  <input type="text" [(ngModel)]="persona.apellidos" [ngModelOptions]="{standalone: true}" class="form-control" id="apellidos">
+                </div>
+                <div class="col-md-6">
+                    <label for="username" class="form-label">Usuario:</label>
+                    <input type="text" [(ngModel)]="persona.username" [ngModelOptions]="{standalone: true}" class="form-control" id="username">
+                  </div>
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" [(ngModel)]="persona.password" [ngModelOptions]="{standalone: true}" class="form-control" id="password">
+                </div>
+                <div class="col-md-4">
+                    <label for="edad" class="form-label">Edad</label>
+                    <input type="number" [(ngModel)]="persona.edad" [ngModelOptions]="{standalone: true}" class="form-control" id="edad">
+                </div>
+                <div class="col-md-4">
+                    <label for="fecha" class="form-label">Fecha nacimiento</label>
+                    <input type="date" [(ngModel)]="persona.fecha_nacimiento" [ngModelOptions]="{standalone: true}" class="form-control" id="fecha" value="01/01/2020" >
+                </div>
+
+                <div class="col-md-4">
+                  <label for="genero" class="form-label">Genero:</label>
+                  <input type="text" [(ngModel)]="persona.sexo" [ngModelOptions]="{standalone: true}" class="form-control" id="genero">
+                </div>
+
+                <div class="col-md-8">
+                    <label for="email" class="form-label">Correo</label>
+                    <input type="email" [(ngModel)]="persona.correo" [ngModelOptions]="{standalone: true}" class="form-control" id="email" placeholder="name@example.com">
+                </div>
+
+                <div class="col-md-4">
+                  <label for="perfil" class="form-label">Perfil:</label>
+                  <input type="text" [(ngModel)]="persona.perfil" [ngModelOptions]="{standalone: true}" class="form-control" id="perfil">
+                </div>
+
+                <div class="col-md-12">
+                  <button (click)="guardarPersona()" type="submit" class="btn btn-primary">
+                    Guardar
+                  </button>
+                </div>
+                <br/>                
+            </form>
+        </div>
+    </div>
+</div>
+<br/>

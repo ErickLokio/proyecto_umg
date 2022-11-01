@@ -1,0 +1,42 @@
+<div class="container w-50 bg-primary mt-5 rounder shadow">
+    <div class="row align-items-stretch" >
+        <div class="col bg-white rounder">
+            <h2 class="fw-bold text-center py-5">Ingreso de Sedes</h2>
+
+            <form class="row g-3">
+                <div class="col-md-12">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" [(ngModel)]="sedes.nombre" [ngModelOptions]="{standalone: true}" class="form-control" id="nombre">
+                </div>
+                <div class="col-md-12">
+                  <label for="direccion" class="form-label">Direccion</label>
+                  <input type="text" [(ngModel)]="sedes.direccion" [ngModelOptions]="{standalone: true}" class="form-control" id="direccion">
+                </div>
+                <div class="col-md-12">
+                  <label for="longitud" class="form-label">Longitud</label>
+                  <input type="text" [(ngModel)]="sedes.longitud" [ngModelOptions]="{standalone: true}" class="form-control" id="longitud">
+                </div>
+                <div class="col-md-12">
+                  <label for="latitud" class="form-label">Latitud</label>
+                  <input type="text" [(ngModel)]="sedes.latitud" [ngModelOptions]="{standalone: true}" class="form-control" id="latitud">
+                </div>
+                <div class="col-md-12">
+                  <label for="encargado" class="form-label">Encargado</label>
+                  <input type="text" [(ngModel)]="sedes.encargado" [ngModelOptions]="{standalone: true}" class="form-control" id="encargado">
+                </div>
+                <div class="col-md-12">
+                  <label for="correo" class="form-label">Correo</label>
+                  <input type="text" [(ngModel)]="sedes.correo" [ngModelOptions]="{standalone: true}" class="form-control" id="correo">
+                </div>
+                <div class="col-md-12">
+                  <button (click)="guardarSedes()" type="submit" class="btn btn-primary btn-sm">
+                    Guardar
+                  </button>
+                </div>
+                <br/>                
+            </form>
+            <br/>
+        </div>
+    </div>
+</div>
+<br/>

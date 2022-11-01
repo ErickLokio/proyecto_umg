@@ -1,0 +1,21 @@
+<div class="container w-50 bg-primary mt-5 rounder shadow">
+    <div class="row align-items-stretch" >
+        <div class="col bg-white rounder">
+            <h2 class="fw-bold text-center py-5">Ingreso tipo actividades</h2>
+
+            <form class="row g-3">
+                <div class="col-md-12">
+                  <label for="descripcion" class="form-label">Descripcion tipo actividad</label>
+                  <input type="text" [(ngModel)]="actividad.descripcion" [ngModelOptions]="{standalone: true}" class="form-control" id="descripcion">
+                </div>
+                <div class="col-md-12">
+                  <button (click)="guardarActividad()" type="submit" class="btn btn-primary btn-sm">
+                    Guardar
+                  </button>
+                </div>
+                <br/>                
+            </form>
+        </div>
+    </div>
+</div>
+<br/>

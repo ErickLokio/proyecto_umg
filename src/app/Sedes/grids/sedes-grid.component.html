@@ -1,0 +1,47 @@
+<div class="container w-75 bg-primary mt-5 rounder shadow">
+    <div class="row align-items-stretch" >
+        <div class="col bg-white rounder">
+            <h2 class="fw-bold text-center py-5">Listado de sedes</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="container">
+                        <button (click)="navegar()" type="submit" class="btn btn-success">
+                            Nuevo
+                          </button>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <table class="table table-hover text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Direccion</th>
+                    <th scope="col">Longitud</th>
+                    <th scope="col">Latitud</th>
+                    <th scope="col">Encargado</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">ACTIVIDADES</th>
+                   </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let sed of sedes">
+                    <th scope="row">{{sed.id}}</th>
+                    <td>{{sed.nombre}}</td>
+                    <td>{{sed.direccion}}</td>
+                    <td>{{sed.longitud}}</td>
+                    <td>{{sed.latitud}}</td>
+                    <td>{{sed.encargado}}</td>
+                      <td>{{sed.correo}}</td>
+                    <td>
+                      <button class="btn btn-warning">Editar</button> 
+                      <button (click)="sedesSeccion(sed.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button> 
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+<br/>

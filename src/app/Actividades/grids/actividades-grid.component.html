@@ -1,0 +1,37 @@
+<div class="container w-75 bg-primary mt-5 rounder shadow">
+  <div class="row align-items-stretch" >
+      <div class="col bg-white rounder">
+          <h2 class="fw-bold text-center py-5">Listado de tipo de actividades</h2>
+          <div class="container">
+              <div class="row">
+                  <div class="container">
+                      <button (click)="navegar()" type="submit" class="btn btn-success">
+                          Nuevo
+                        </button>
+                  </div>
+              </div>
+          </div>
+          <br/>
+          <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Descripcion</th>
+                  <th scope="col">ACCIONES</th>
+                 </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let actividad of actividades">
+                  <th scope="row">{{actividad.id}}</th>
+                  <td>{{actividad.descripcion}}</td>
+                  <td>
+                    <button class="btn btn-warning">Editar</button> 
+                    <button (click)="borrarActividad(actividad.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button> 
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+  </div>
+</div>
+<br/>

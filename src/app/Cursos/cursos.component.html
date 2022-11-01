@@ -1,0 +1,21 @@
+<div class="container w-50 bg-primary mt-5 rounder shadow">
+    <div class="row align-items-stretch" >
+        <div class="col bg-white rounder">
+            <h2 class="fw-bold text-center py-5">Ingreso de cursos</h2>
+
+            <form class="row g-3" action="">
+                <div class="col-md-12">
+                  <label  class="form-label">Descripcion cursos</label>
+                  <input type="text" [(ngModel)]="cursos.descripcion" [ngModelOptions]="{standalone: true}" class="form-control">
+                </div>
+                <div class="col-md-12">
+                  <button (click)="guardarCurso()" type="submit" class="btn btn-primary btn-sm">
+                    Guardar
+                  </button>
+                </div>
+                <br/>                
+            </form>
+        </div>
+    </div>
+</div>
+<br/>
